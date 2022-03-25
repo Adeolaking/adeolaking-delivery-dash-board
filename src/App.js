@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Line } from 'react-chartjs-2'
+import { Chart as ChartJS } from 'chart.js/auto'
+// const Button= styled.button`
+//    background-color: none;
+//    color: red;
+// `
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function LineChart(){
+
+   const data = {
+      labels: ['JAN','FEB','MAR','APR','MAY'],
+      datasets:[
+      {
+         label: 'Sales for 2022',
+         data:[3,4,0,6, 15]
+      }
+      ]
+   }
+   return <Line data={data} /> 
 }
 
-export default App;
+
+
+export default LineChart;
