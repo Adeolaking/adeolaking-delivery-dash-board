@@ -2,22 +2,23 @@ import styled from "styled-components";
 
 
 export const DashBoard =styled.main`
+                width: 100%;
                 display: grid;
                 ${'' /* background: gray; */}
                 grid-template-columns: .3fr 1fr;
                 grid-template-rows: repeat(4, 1fr);
-                height:80vh;
+                ${'' /* height:80vh; */}
                 grid-gap: 2rem;
                 padding-bottom: 2rem;
 
 
-                 .overviewChart{
+                .overviewChart{
                         grid-column:  2 / span 2;
                         grid-row:1 / span 2;
                         display: grid;
                         grid-template-columns: .35fr 1fr;
                         gap: 2rem;
-
+                        justify-content: space-between;
                         .overviewChart__first-card{
                                 h2{
                                         font-size: 3.5rem;
@@ -119,13 +120,12 @@ export const DashBoard =styled.main`
 `
 
 export const MainCont=styled.section`
+
         display: grid;
         grid-template-columns: 1.5fr 8fr;
         grid-template-rows:  9fr;
         ${'' /* grid-gap: 3rem;  */}
         background:#e5eff4;
-
-        height: 100vh;
 
         & > div{
             padding: 0 2.5rem;
@@ -149,6 +149,7 @@ export const Card = styled.div`
         display: flex;
         flex-direction: column;
         justify-content:space-around;
+        width:100%;
         
         p{
                 font-size: 1.2rem;

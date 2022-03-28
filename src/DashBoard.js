@@ -8,6 +8,7 @@ import navData from "./navData";
 import styled from "styled-components";
 import { statusData } from "./status.data";
 import { Header } from "./header";
+import {LineChart, BarChart }from './App'
 
 
 
@@ -57,7 +58,7 @@ export const SideNav = styled.nav`
 
 function App() {
   return (
-    <section>
+    <section className="stem">
       <Header>
         <div className="logo">LOgo</div>
         <div className="header ">
@@ -113,7 +114,11 @@ function App() {
                     </span>
                     <p>compared to yesterday</p>
                </Card>
-              <Card>Overview</Card>
+              <Card>
+                <div className="chart">
+                   <LineChart />
+                </div>
+              </Card>
             </Container>
 
             {statusData.map((data,key) => {
@@ -192,7 +197,9 @@ function App() {
                   </div>
               </Card>
               <Card>
-                  gj
+                <div className="chart">
+                    <BarChart />
+                </div>
               </Card>
             </Container>
           </DashBoard>
